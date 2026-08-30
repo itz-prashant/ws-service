@@ -59,7 +59,7 @@ export class KafkaBroker implements MessageBroker {
           topic,
           partition,
         });
-
+        // add this
         switch (topic) {
           case "order":
             {

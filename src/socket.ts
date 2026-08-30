@@ -9,8 +9,10 @@ io.on("connection", (socket)=>{
   console.log("Client connected", socket.id)
 
   socket.on("join", (data)=>{
-    socket.join(String(data.tenantId))
+    socket.join(String(data.tenantId)) // join rooms
 
+    // Get rooms
+    // console.log(io.of("/").adapter.rooms)
     socket.emit("join", {roomId: String(data.tenantId)})
   })
 })
